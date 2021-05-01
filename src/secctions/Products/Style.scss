@@ -1,0 +1,97 @@
+@import "../../assets/style/variables";
+
+.section3 {
+    background: linear-gradient(90deg, $color_background 80%, $color_border 10%);
+    border-right: solid;
+    border-right-color: $color_border;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    .content-s3 {
+        width: 80%;
+        margin-right: 10%;
+        margin-left: 10%;
+        height: 100%;
+        .container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            align-self: center;
+            align-items: center;
+            /* display: flex; */
+            justify-content: center;
+        }
+        .photo-background-s3 {
+            position: relative;
+            max-height: 552px;
+            width: inherit;
+            height: inherit;
+            z-index: 1;
+            background-image: url("#{$route_img}section3-image.png");
+            background-position: center;
+            background-size: cover;
+        }
+        .block-orange-s3 {
+            position: absolute;
+            background-color: $color_primary;
+            color: #ffffff;
+            bottom: 0;
+            right: 0;
+            margin-left: 50%;
+            padding: 7% 5%;
+            .carousel-content {
+                .item {
+                    display: none;
+                    &.selected {
+                       
+                        display: block;
+                        animation-name: selected;
+                        animation-duration: 0.4s;
+                        @keyframes selected {
+                            from {
+                                opacity: 0;
+                                transform: translateY(-100%);
+                            }
+                            to {
+                                transform: translateY(0);
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+            .text2-s3 {
+                font-size: 35px;
+                margin-bottom: 4%;
+                font-family: "poppins";
+                font-weight: 400;
+                letter-spacing: 0.55px;
+            }
+            .text3-s3 {
+                font-family: $regular_name_font;
+            }
+            .button-s3 {
+                display: flex;
+                padding: 4%;
+                justify-content: flex-end;
+                margin-right: 20px;
+                margin-bottom: -10%;
+                button {
+                    border: none;
+                    background-color: $color_primary;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .section3 {
+        .photo-background-s3 {
+            .block-orange-s3 {
+                margin-left: 20%;
+            }
+        }
+    }
+}

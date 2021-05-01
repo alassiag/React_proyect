@@ -1,0 +1,58 @@
+@import "../../assets/style/variables";
+
+.my-carrousel {
+    
+    .container-points {
+        display: flex;      
+        margin-left: .5%; 
+        .point {
+            margin-top: 4%;
+            margin-right: 1.2%;
+            width: 10px;
+            height: 10px;
+            background: gray;
+            border-radius: 50%;
+            &.selected {
+                background: $color_primary;
+            }
+        }
+    }
+
+    .item {
+        margin-top: 85px;
+        display: none;
+        &.active {
+            display: block;
+         
+            .content {
+                animation-name: Switch;
+                animation-duration: 0.4s;
+               
+                @keyframes Switch {
+                
+                    from {
+                        transform: translateX(100%);
+                        opacity: 0;
+                    }
+                    to {
+                        transform: translateX(0);
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        .text1-s1 {
+            width: 55%;
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+        .text2-s1 {
+            width: 35%;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+    }
+    
+}
+
+

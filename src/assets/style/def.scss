@@ -1,0 +1,70 @@
+@import './variables';
+
+@font-face{
+    font-family:$title_name_font;
+    font-weight: 600;
+    src: url("#{$route_font}Poppins-SemiBold.ttf");
+}
+
+@font-face{
+    font-family:$regular_name_font;
+    font-weight: 400;
+    src: url('#{$route_font}Roboto-Regular.ttf');
+}
+@font-face{
+    font-family:$medium_name_font;
+    font-weight: 500;
+    src: url("#{$route_font}Roboto-Medium.ttf");
+    //reemplaza el src: url("/assets/fonts/Roboto-Medium.ttf");
+    //por un src: url("#{$route_font}Roboto-Medium.ttf");  , donde el $route_fomt , tiene la ruta de la fuente.
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family:$medium_name_font;
+    letter-spacing: 0.22px;
+}
+a{
+    text-decoration: none;
+    &:hover{
+    text-decoration: none;
+    }
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+::selection{
+    background-color: $color_primary;
+    color: #ffffff;
+}
+
+button {
+    cursor: pointer;
+    &:active{
+        border-style: none;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+
+
+.text1-s1 p,.text1span-s2,.text1-s2,.text1-s2 span,.text1-s5 p,.text1-s5 span{
+    font-family: $title_name_font;
+    font-weight: 600;
+    line-height: 1.2em;
+    letter-spacing: 0.67px;
+}
+nav,.text2-s1,.text1-s3{
+    font-family:$medium_name_font;
+}

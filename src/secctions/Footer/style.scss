@@ -1,0 +1,25 @@
+@import "../../assets/style/variables";
+
+.container-footer {
+    box-sizing: border-box; 
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 1.4rem;
+    z-index: 222;
+    height: 68px;
+    background: $color_secundary;
+    color: $color_border;
+    bottom:0%;
+    padding: 0px 75px;
+}
+@media screen and (max-width: 768px) {
+    .container-footer {
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 0px 7px;
+    font-size: 1rem;
+    }
+}
