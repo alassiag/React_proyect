@@ -26,7 +26,7 @@ header {
             padding: 20px;
             :hover {
                 color: $color_primary;
-                transition-duration: 0.2s;
+                transition-duration: 0.1s;
             }
         }
         a {
@@ -70,6 +70,7 @@ header {
 
 @media screen and (max-width: 768px) {
     nav {
+         background: rgba(0, 0, 0, 0.7);
         .nav-logo img {
         
             height: 30px;
@@ -83,7 +84,6 @@ header {
         .navLinks {
             transition-duration: 0.4s;
             :hover {
-                background:rgba(144, 144, 144, 0.6);
                 transition-duration: .3s;
             }
             
@@ -92,7 +92,7 @@ header {
                 padding: 15px ;
                 display: none;
                 border-bottom: 1px solid $color_primary;
-               
+                
             }
         }
     }
@@ -101,12 +101,6 @@ header {
 @media screen and (max-width: 768px) {
     .nav.responsive {
         .navLinks {
-            /*
-            transition-duration: 0.4s;
-            display: block;
-            margin-right: 10px;
-            margin-top: 54px;
-            text-align: right;*/
             transition-duration: 0.3s;
             background: rgba(44, 44, 44, 0.6);
             position: absolute;
