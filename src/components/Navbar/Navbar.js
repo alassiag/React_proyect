@@ -46,11 +46,11 @@ const Navbar = () => {
                         <div className="bar3"></div>
                     </div>
                     <div className="navLinks" id="navLinks">
-                        <li className="nav-element"><a href="#home">Home</a></li>
-                        <li className="nav-element"><a href="#about">About</a></li>
-                        <li className="nav-element"><a href="#product">Products</a></li>
-                        <li className="nav-element"><a href="#services">Services</a></li>
-                        <li className="nav-element"><a href="#contact">Contact</a></li>
+                        <li className="nav-element"><a href="#home" onClick={()=>displayMenu()}>Home</a></li>
+                        <li className="nav-element"><a href="#about"onClick={()=>displayMenu()}>About</a></li>
+                        <li className="nav-element"><a href="#product" onClick={()=>displayMenu()}>Products</a></li>
+                        <li className="nav-element"><a href="#services" onClick={()=>displayMenu()}>Services</a></li>
+                        <li className="nav-element"><a href="#contact" onClick={()=>displayMenu()}> Contact</a></li>
                     </div>
                 </ul>
             </nav>
