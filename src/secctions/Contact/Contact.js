@@ -37,7 +37,7 @@ const Contact = () => {
                             <input type="tel" className="form-control" id="inputPhone" placeholder="Phone" />
                             <textarea className="form-control" id="inputMessage" placeholder="Message" />
                         </div>
-                        <button type="button" className="btn-read-more rounded-pill"> Send </button>
+                        <button type="button" className="btn-read-more"> Send </button>
                     </form>
                    {/* <form action="" onSubmit={(e)=>handleSubmit(e)}>
                         <div className="form-group row">
