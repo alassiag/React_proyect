@@ -8,16 +8,16 @@ const Pruducts = () => {
     const [selected, setSelected] = useState(0)
     //lo hago de esta manera a proposito, se que lo podria hacer sin necesidad de crear objetos.
     const carouselContent = [{
-        title: "Primer titulo", subtitle: "Sub titulo 1",
-        message: "Primer texto de ejemplo omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam."
+        title: "Sed ut perspiciatis 1", subtitle: "Nemo Enim",
+        message: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam."
     },
     {
-        title: "Segundo titulo", subtitle: "Sub titulo 2",
-        message: "Segundo texto de ejemplo unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam."
+        title: "Sed ut perspiciatis 2", subtitle: "Nemo Enim",
+        message: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam."
     },
     {
-        title: "Tercer titulo", subtitle: "Sub titulo 3",
-        message: "Tercer texto de ejemplo unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam."
+        title: "Sed ut perspiciatis 3", subtitle: "Nemo Enim",
+        message: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam."
     }]
 
 
@@ -65,7 +65,7 @@ const Pruducts = () => {
                                         })
                                     }
                                 </div>
-                                <div class="button-s3">
+                                <div className="button-s3">
                                     <button href="" className="left-arrow"><img src={leftArrow} alt="flecha izquierda" onClick={lowerPosition} /></button>
                                     <button href="" className="left-arrow"><img src={rightArrow} alt="flecha derecha" onClick={upPosition} /></button>
                                 </div>

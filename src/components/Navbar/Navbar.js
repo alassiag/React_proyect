@@ -33,13 +33,11 @@ const Navbar = () => {
          }
     )
     
-
-
     return (
         <header>
             <nav ref={nav} className="nav" id="nav">
                 <ul className="nav-conteiner">
-                    <li className="nav-logo"><a href="#home"><img src={logo} alt='logo 25Watts'/></a></li>
+                    <li className="nav-logo"><a href="#home" ><img src={logo} alt='logo 25Watts'/></a></li>
                     <div ref={button} class="mobile-menu" onClick={()=>displayMenu()}>
                         <div className="bar1"></div>
                         <div className="bar2"></div>

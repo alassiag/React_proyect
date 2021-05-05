@@ -17,7 +17,9 @@
 
             .panel {
                 border: 0.5px solid rgba(16, 16, 16, 0.18) !important;
-                max-height: 300px !important;
+                max-height: 400px !important;
+                line-height: 28px;
+                padding: 17px 40px;
             }
         }
     }
@@ -79,6 +81,14 @@
         .item {
             margin-left: 8%;
             width: 75%;
+            &.active {
+                .panel {       
+                    max-height: 400px !important;
+                    line-height: 18px;
+                    text-align: justify;
+                    padding: 17px 30px;
+                }
+            }
         }
     }
 
