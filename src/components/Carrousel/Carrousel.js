@@ -1,5 +1,4 @@
 import "./Style.scss"
-//import slider from "../../assets/images/slider-1.png"
 import React, { useState } from 'react'
 
 const Carraousel = (contenido) => {
@@ -11,8 +10,10 @@ const Carraousel = (contenido) => {
             {  
                 contenido.children.map((item, index) => {
                     return (         
-                        <div className={`${carruselSelected === index ? "item active" : "item"}`}>            
+                        <div className={`${carruselSelected === index ? "item active" : "item"}`}>      
+    
                             <div className="content">
+                                
                                 <div className="text1-s1">
                                     <p>
                                         {item.title}

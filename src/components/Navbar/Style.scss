@@ -82,6 +82,7 @@ header {
             
         }
         .navLinks {
+         
             transition-duration: 0.4s;
             :hover {
                 transition-duration: .3s;
@@ -92,7 +93,10 @@ header {
                 padding: 15px ;
                 display: none;
                 border-bottom: 1px solid $color_primary;
-                
+            
+            }
+            li:last-child {
+                border:none;
             }
         }
     }
@@ -109,6 +113,7 @@ header {
             padding: 10px;
             margin-top: 95px;
             text-align: right;
+            max-width: 95%;
 
             li {
                 display: block;

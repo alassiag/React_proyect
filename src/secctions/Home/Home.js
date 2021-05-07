@@ -1,10 +1,9 @@
-import Carraousel from "./../../components/Carrousel/Carrousel"
+import Carraousel from "../../components/Carrousel/Carrousel"
 import "./Style.scss"
 import React from 'react'
-//import slider from '../../assets/images/slider-1.png'
 
 
-const Masthead = () => {
+const Home = () => {
 
 
     const contenido = [
@@ -24,4 +23,4 @@ const Masthead = () => {
     )
 }
 
-export default Masthead
+export default Home
