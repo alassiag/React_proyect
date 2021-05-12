@@ -1,10 +1,10 @@
 import axios from 'axios'
 
 const instance = axios.create({
-  baseURL: 'http://localhost/api/'
+  baseURL: 'http://nelson-laravel-api.herokuapp.com/public/api' 
 })
 
-
+//http://localhost/api/
 
 const sendEmail = async (data) => {
     const response = await instance({
