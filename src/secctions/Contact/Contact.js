@@ -1,62 +1,138 @@
-//import React, { useState } from 'react'
-//import { sendEmail } from "../../Api/axios"
-import './Style.scss'
+import React, { useState } from 'react';
+import { Form, Alert  } from 'react-bootstrap';
+import { sendEmail } from "../../axios";
+import './Style.scss';
 
 const Contact = () => {
-   /* const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        tel: "",
-        message: ""
-    })
+    const [validated, setValidated] = useState(false);
+    const [formData, setFormData] = useState({});
 
+    const [showAlert, setShowAlert] = useState(false)
+    const [error, setError] = useState(false)
+  
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log('Se envio')
+       // console.log('Se envio')
+        const form = e.currentTarget;
+        setValidated(true);
 
-        let responseData = await sendEmail(formData)
-        console.log(responseData.data)
-    }  */
+        if (form.checkValidity() === false) {
+          e.stopPropagation();
+        } else {
+          let response
+          
+          try {
+            response = await sendEmail(formData);
+    
+            if (response.status === 201) {
+              setShowAlert(true)
+              setError(false);
+    
+              form.reset()
+    
+              setValidated(false);
+    
+              setTimeout(()=>{setShowAlert(false)}, 3000)
+            } else {
+              setError(true)
+            }
+          } catch(err) {
+            setShowAlert(true)
+            setError(true)
+          }
+        }
+      }
+  
+    const handleOnChange = (e) => {
+        console.log(e.target.name)
+        console.log(e.target.value)
+
+  
+    
+    setFormData((prevState) => {
+        return {
+            ...prevState,
+            [e.target.name]: e.target.value
+          }
+         })
+   
+    }  
+    console.log(formData)
 
     return (
         <div className="section5" id="contact">
             <div className="content-s5">
                 <div className="form-s5 container">
                     <div className="text1-s5">
-                        <p>Get in touch <br></br>
-                <span>
-                                We are hiring!
-                </span>
+                        <p>
+                            Get in touch <br></br>
+                            <span>We are hiring</span>
                         </p>
                     </div>
 
-                    <form action="">
+                   
+                    <Form noValidate validated={validated} onSubmit={(e)=>handleSubmit(e)}>
                         <div className="form-group row">
-                            <input type="text" className="form-control" id="inputName" placeholder="Name" />
-                            <input type="email" className="form-control" id="inputEmail" placeholder="Email" />
-                            <input type="tel" className="form-control" id="inputPhone" placeholder="Phone" />
-                            <textarea className="form-control" id="inputMessage" placeholder="Message" />
+                        <Form.Group>
+                            <Form.Control
+                            onChange={handleOnChange}
+                            required
+                            type='text'
+                            placeholder='Name'
+                            name='name'
+                            />
+                        </Form.Group>
+
+                        <Form.Group >
+                            <Form.Control
+                            onChange={handleOnChange}
+                            required
+                            name='email'
+                            type='email'
+                            placeholder='Email'
+                            />
+                       
+                        </Form.Group>
+
+                        <Form.Group >
+                            <Form.Control
+                            onChange={handleOnChange}
+                            required
+                            name='phone'
+                            type='tel'
+                            placeholder='Phone'
+                            />
+                        </Form.Group>
+
+                        <Form.Group controlId='formBasicTextArea'>
+                            <Form.Control
+                            onChange={handleOnChange}
+                            required
+                            name='message'
+                            as='textarea'
+                            rows={3}
+                            placeholder='Message'
+                            />
+                           
+                        </Form.Group>
+                    
                         </div>
-                        <button type="button" className="btn-read-more"> Send </button>
-                    </form>
-                   {/* <form action="" onSubmit={(e)=>handleSubmit(e)}>
-                        <div className="form-group row">
-                            <input value={formData.name} onChange={(e) => { setFormData({ ...formData, name: e.target.value }) }} type="text" id="inputName" placeholder="Name" />
-                            <input value={formData.email} onChange={(e) => { setFormData({ ...formData, email: e.target.value }) }} type="email" id="inputEmail" placeholder="Email" />
-                            <input value={formData.tel} onChange={(e) => { setFormData({ ...formData, tel: e.target.value }) }} type="tel" id="inputPhone" placeholder="Phone" />
-                            <textarea value={formData.message} onChange={(e) => { setFormData({ ...formData, message: e.target.value }) }} type="textarea" id="inputMessage" placeholder="Message" />
-                        </div>
-                        <button type="button" className="btn-read-more rounded-pill"> Send </button>
-                    </form>  */}
+                        <button type="submit" className="btn-read-more rounded-pill"> Enviar </button>
+                    </Form>  
                 </div>
 
                 <div className="img-derecha-s5">
                     <img src="images/contact-image.png" alt="" />
                 </div>
             </div>
+            { showAlert 
+                ? error 
+                  ? <Alert variant={'danger'}>Hubo un error al enviar el email </Alert> 
+                  : <Alert variant={'success'}>Email enviado con éxito</Alert> 
+                : null }
         </div>
-
+            
     )
-}
+}  
 
 export default Contact
