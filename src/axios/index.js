@@ -1,11 +1,11 @@
 import axios from 'axios'
 
 const instance = axios.create({
-  baseURL: 'https://luiszelarrayan-back-laravel.herokuapp.com/api/' 
+  baseURL: '' 
 })
 
 
-//
+//https://luiszelarrayan-back-laravel.herokuapp.com/api/
 //https://nuestraweb.com.ar/api/
 //https://nelson-laravel-api.herokuapp.com/public/api
 //https://laravel-api-back.herokuapp.com/public/api/
