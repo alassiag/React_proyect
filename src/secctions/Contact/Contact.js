@@ -68,18 +68,16 @@ const Contact = () => {
                             Get in touch <br></br>
                             <span>We are hiring</span>
                         </p>
-                    </div>
-
-                   
+                    </div>                 
                     <Form noValidate validated={validated} onSubmit={(e)=>handleSubmit(e)}>
                         <div className="form-group row">
                         <Form.Group>
                             <Form.Control
                             onChange={handleOnChange}
-                            required
                             type='text'
                             placeholder='Name'
                             name='name'
+                            required
                             />
                         </Form.Group>
 
@@ -90,8 +88,7 @@ const Contact = () => {
                             name='email'
                             type='email'
                             placeholder='Email'
-                            />
-                       
+                            />                      
                         </Form.Group>
 
                         <Form.Group >
@@ -113,7 +110,6 @@ const Contact = () => {
                             rows={3}
                             placeholder='Message'
                             />
-                           
                         </Form.Group>
                     
                         </div>

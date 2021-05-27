@@ -25,8 +25,11 @@ header {
             list-style: none;
             padding: 20px;
             :hover {
+                z-index:344;
                 color: $color_primary;
-                transition-duration: 0.1s;
+                transition-duration: 0.2s;
+                justify-content: space-around;
+                
             }
         }
         a {
