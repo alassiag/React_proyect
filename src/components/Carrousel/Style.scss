@@ -17,7 +17,9 @@
             }
         }
     }
-
+     .point:hover {
+        cursor: pointer;
+    }
     .item {
         margin-top: 85px;
         display: none;
