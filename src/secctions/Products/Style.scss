@@ -26,18 +26,20 @@
             width: inherit;
             height: inherit;
             z-index: 100;
-            background-image: url("#{$route_img}section3-image.png");
+            background-image: url("#{$route_img}porto-trapani.jpg");
             background-position: center;
             background-size: cover;
         }
         .block-orange-s3 {
             position: absolute;
-            background-color: $color_primary;
-            color: #ffffff;
+            background-color: rgba($color_primary, 0.6);
+            color: #332e2e;
             bottom: 0;
             right: 0;
-            margin-left: 51%;
-            padding: 7% 5%;
+            box-sizing: border-box;
+            margin-left: 71%;
+            height: 50%;
+            padding: 2% 5%;
             .carousel-content {
                 .item {
                     display: none;
@@ -49,10 +51,10 @@
                         @keyframes selected {
                             from {
                                 opacity: 0;
-                                transform: translateY(-100%);
+                                transform: scale(-100%);
                             }
                             to {
-                                transform: translateY(0);
+                                transform: scale(100%);
                                 opacity: 1;
                             }
                         }

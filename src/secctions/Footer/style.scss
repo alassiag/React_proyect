@@ -9,10 +9,27 @@
     font-size: 1.4rem;
     z-index: 222;
     height: 68px;
-    background: $color_secundary;
+    background: $color_primary;
     color: $color_border;
     bottom:0%;
     padding: 0px 75px;
+    .footerlink  {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Oswald', sans-serif;
+        font-size: 2.6rem;
+        font-weight: 740;
+        letter-spacing: .3rem;
+        color: $color_border;
+        :hover a {
+        color: $color_primary;
+        transform: scale3d(1.1, 1.1, 1.1);
+        transition-duration: 0.2s;
+        } 
+    }
+       
+     
 }
 @media screen and (max-width: 768px) {
     .container-footer {
@@ -20,6 +37,12 @@
     align-items: center;
     flex-wrap: nowrap;
     padding: 0px 7px;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    .footerlink {
+        font-size: 1.3rem;
+        font-weight: 540;
+        letter-spacing: .2rem;
+        color: #ffffff;
     }
+  }
 }

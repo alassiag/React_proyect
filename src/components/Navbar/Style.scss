@@ -19,6 +19,13 @@ header {
             margin-left: auto;
             
         }
+        .home {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.6rem;
+            font-weight: 540;
+            letter-spacing: .3rem;
+            color: #ffffff;
+        }
 
         li {
             margin: 10px;
@@ -56,24 +63,31 @@ header {
                 transition: 0.4s;
             }
             &.change .bar1 {
-                -webkit-transform:  translateY(200%) ;
+                transform:  translateY(200%);
                 transform:  translateY(200%);
             }
             &.change .bar2 {
+                transform:  scaleX(-100%);
+                transition: all 0.3s;
                 opacity: 0;
             }
 
             &.change .bar3 {
-                -webkit-transform: translateY(-200%,) ;
-                transform: translateY(-200%,); 
+                -webkit-transform: translateY(-200%);
+                transform: translateY(-200%); 
             }
         }
     }
 }
 
 @media screen and (max-width: 768px) {
+        
         .nav {
-         background: rgba(0, 0, 0, 0.7);
+        // background: rgba(0, 0, 0, 0.7);
+         .home {
+            font-size: 1.6rem;
+            letter-spacing: 0.1rem;
+        }
         .nav-logo img {
         
             height: 30px;

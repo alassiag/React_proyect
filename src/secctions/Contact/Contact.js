@@ -123,7 +123,7 @@ const Contact = () => {
             </div>
             { showAlert 
                 ? error 
-                  ? <Alert variant={'danger'}>Hubo un error al enviar el email </Alert> 
+                  ? <Alert >Hubo un error al enviar el email </Alert> 
                   : <Alert variant={'success'}>Email enviado con éxito</Alert> 
                 : null }
         </div>
